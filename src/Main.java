@@ -31,7 +31,7 @@ public class Main
 
         lineArray.add("Andrew");
         lineArray.add("Sarah");
-        lineArray.add("Will");
+        lineArray.add("Will ");
         lineArray.add("Evelyn");
         lineArray.add("David");
         lineArray.add("Steven");
