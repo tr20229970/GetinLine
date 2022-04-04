@@ -31,13 +31,13 @@ public class Main
 
         lineArray.add("Andrew");
         lineArray.add("Sarah");
-        lineArray.add("Will ");
+        lineArray.add("Will");
         lineArray.add("Evelyn");
         lineArray.add("David");
         lineArray.add("Steven");
+
+
         lineArray.remove("Evelyn");
-
-
         lineArray.set(1, "Samantha");
 
         System.out.println("Will, is currently in the (" +  (lineArray.indexOf("Will") + 1) + ") Position");
@@ -47,13 +47,14 @@ public class Main
 
         System.out.println("The Last person in Line is (" +  lineArray.get(lineArray.size() - 2) + ") ");
 
-
         lineArray.set(0, lineArray.remove(lineArray.size() - 1));
+
 
         if(lineArray.contains("David"))
             System.out.println("David is not in Line");
         else
             System.out.println("David is in Line");
+
 
         System.out.print("Would you like to Add a Person\n Type [1] to add person ");
 
@@ -62,7 +63,7 @@ public class Main
         {
             System.out.print("What is the person name? ");
             name = stringReader.nextLine();
-            System.out.print("Where Would you like to put this person?");
+            System.out.print("Where Would you like to put this person?, 0 - " + lineArray.size() + " " );
             System.out.println(addPerson(intReader.nextInt(), name));
             System.out.print("Would you like to Add a Person\n Type [1] to add person ");
 
@@ -71,19 +72,11 @@ public class Main
         System.out.println("Moving on... \nKicking out everyone with the starting letter 'S'");
         removeNameStartingWithLetter('S');
         System.out.print(lineArray);
-
-
-
-
-
-
-
-
     }
 
     static String addPerson(int index, String name)
     {
-        if(index < 0 || index > lineArray.size() - 1)
+        if(index < 0 || index > lineArray.size())
             return "Not Valid index";
 
         lineArray.add(index, name);
@@ -93,13 +86,13 @@ public class Main
 
     static void removeNameStartingWithLetter(char letter)
     {
-        for(int i = 0; i < lineArray.size(); i++)
-            if(lineArray.get(i).charAt(0) == letter)
+        for (int i = 0; i < lineArray.size(); i++)
+        {
+            if (lineArray.get(i).charAt(0) == letter)
             {
                 lineArray.remove(i);
                 i--;
             }
-
-
+        }
     }
 }
