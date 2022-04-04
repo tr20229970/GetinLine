@@ -56,7 +56,7 @@ public class Main
             System.out.println("David is in Line");
 
 
-        System.out.print("Would you like to Add a Person\n Type [1] to add person ");
+        System.out.print("Would you like to Add a Person\n Type [1] to add person, Type [-1] to Quit ");
 
 
         while(intReader.nextInt() == 1)
@@ -66,7 +66,6 @@ public class Main
             System.out.print("Where Would you like to put this person?, 0 - " + lineArray.size() + " " );
             System.out.println(addPerson(intReader.nextInt(), name));
             System.out.print("Would you like to Add a Person\n Type [1] to add person ");
-
         }
 
         System.out.println("Moving on... \nKicking out everyone with the starting letter 'S'");
