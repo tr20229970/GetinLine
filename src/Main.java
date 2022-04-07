@@ -84,6 +84,7 @@ public class Main
         return name + " Added @ Index [" + index + "]";
     }
 
+	
     // Removes Name starting with certain letter
     static void removeNameStartingWithLetter(char letter)
     {
