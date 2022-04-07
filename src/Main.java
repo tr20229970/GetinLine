@@ -58,7 +58,7 @@ public class Main
 
         System.out.print("Would you like to Add a Person\n Type [1] to add person, Type [-1] to Quit ");
 
-
+	// Adds a person to the Line
         while(intReader.nextInt() == 1)
         {
             System.out.print("What is the person name? ");
@@ -73,6 +73,8 @@ public class Main
         System.out.print(lineArray);
     }
 
+
+    // Adds person added specific index
     static String addPerson(int index, String name)
     {
         if(index < 0 || index > lineArray.size())
@@ -82,7 +84,7 @@ public class Main
         return name + " Added @ Index [" + index + "]";
     }
 
-
+    // Removes Name starting with certain letter
     static void removeNameStartingWithLetter(char letter)
     {
         for (int i = 0; i < lineArray.size(); i++)
